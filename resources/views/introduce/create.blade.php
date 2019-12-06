@@ -16,13 +16,14 @@
             <p>사진</p> 
             <input type="file" name="photo" id="photo">
             <!-- 미리보기 출력 -->
-            <p>최근 선택한 이미지</p>  
-            <img id ="nowPhoto"/>
+            <div class = "change_img"> 
+                <p>최근 선택한 이미지</p>  
+                <img id ="nowPhoto"/>
+            </div>
         </div>
     </div>
-
+    <hr>
     <div>
-    </br>
         <button type="submit" class="addBtn btn btn-secondary">저장하기</button>
         <button type="button" class="clsBtn btn btn-secondary" data-dismiss="modal">취소</button>
     </div>
