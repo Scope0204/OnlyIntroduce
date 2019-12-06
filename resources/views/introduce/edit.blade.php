@@ -9,17 +9,21 @@
             <P>이름</P>
             <input name="name" id ="name" value="{{ old('name',$member->name)}}"></input>
             <P>자기소개</P>
-            <textarea cols='30' rows='5' name='intro' id='intro'>{{ old('intro', $member->intro ) }}</textarea>
+            <textarea cols='62' rows='3' name='intro' id='intro'>{{ old('intro', $member->intro ) }}</textarea>
             <P>목표</P> 
-            <textarea cols='30' rows='5' name="goal" id ="goal">{{ old('goal',$member->goal) }}</textarea>
+            <textarea cols='62' rows='3' name="goal" id ="goal">{{ old('goal',$member->goal) }}</textarea>
             <div class = img_wrap>
                 <p>현재 사진</P>
-                <img src="/images/{{ $member->photo }}" width="300" alt="photo x"></br>
+                <div class = "save_img">
+                    <img src="/images/{{ $member->photo }}" width="300" alt="photo x"></br>
+                </div>
                 <p>바꿀 사진</p>
                 <input type="file" name="photo" id="photo" value="{{ old('photo',$member->photo )}}"></br>
-                <!-- 미리보기 출력 -->
-                <p>최근 선택한 이미지</p>
-                <img id ="nowPhoto" />
+                <div class = "change_img">   
+                    <!-- 미리보기 출력 -->
+                    <p>최근 선택한 이미지</p>
+                    <img id ="nowPhoto" />
+                </div>
             </div>
         </div>
         <div class="authenticate">
@@ -30,6 +34,7 @@
             <input type=password name="password" id="password" ></input>
         </div>
     </div>
+    <hr>
     <div>
         <button type="submit" class="saveBtn btn btn-secondary" data-id="{{$member->id}}">저장하기</button>
         <button type="button" class="clsBtn btn btn-secondary" data-id="{{$member->id}}" data-dismiss="modal">삭제하기</button>
@@ -78,8 +83,7 @@
             type: 'DELETE',
             data: {
                 user_id : $('#user_id').val(),
-                password : $('#password').val(),
-                
+                password : $('#password').val(),  
             },
             url: '/introduce/' + clsId,   
             }).then(function(data) {
@@ -97,7 +101,7 @@
          }
     });
     
-    $('.saveBtn').on('click', function(e){  
+    $('.saveBtn').on('click', function(e){ 
         //GET form
         var form = $('#formData')[0];
         var introId = $(this).attr('data-id'); // member의 id값을 가져옴

@@ -50,7 +50,10 @@
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
         COLOR: #2E86B9;
         PADDING-BOTTOM: 5px;
-        
+        font-weight:bold;
+
+        /* FONT-SIZE: 22px; COLOR: #eeeeee; PADDING-BOTTOM: 10px; TEXT-ALIGN: left; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #00b5ff 8px solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #282828; border-radius:3px; padding-left: 0px; */
+
     }
     .authenticate p{
         margin: 0px;
@@ -59,28 +62,47 @@
     .authenticate input{
         margin-bottom: 10px;
     }
+/* 생성하기 */
+    .create p{
+        margin: 0px;
+        margin-top: 10px;   
+    }
+
 /* 수정하기 */
-    .edit input,textarea{
-        margin-bottom: 10px;
-    } 
-
-
     .edit p{
         margin: 0px;
         margin-top: 10px;
     }
 /* 사진 크기 */
-    .img_wrap{
-        width: 300px;
-    }
     .img_wrap img{
+        width: 300px;
         max-width: 100%;
-        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
     }
-
     .img_wrap p{
         margin-top : 10px;
     }
+    /* 기존 사진 */
+    .save_img{
+        text-align:center;
+        border:1px solid #F2F2F2;
+        border-radius:5px;
+    }
+    .save_img img{
+        display: inline-block;
+    }
+    /* 미리보기 사진 */
+    .change_img{
+        text-align:center;
+        border:1px solid #F2F2F2;
+        border-radius:5px;
+    }
+    .change_img img{
+        display: inline-block;
+    }
+    
    
 
 /* 나경이누나가 한거 */

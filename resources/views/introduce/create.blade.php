@@ -4,12 +4,14 @@
         <ul></ul>
     </div>
     <div class="form-group">
-        <P>이름</P>
-        <input name="name" id ="name" value="{{ old('name')}}"></input>
-        <P>자기소개</P>
-        <textarea cols='30' rows='5' name='intro' id='intro'>{{ old('intro') }}</textarea>
-        <P>목표</P> 
-        <textarea cols='30' rows='5' name="goal" id ="goal">{{ old('goal') }}</textarea>
+        <div class ="create">
+            <P>이름</P>
+            <input name="name" id ="name" value="{{ old('name')}}"></input>
+            <P>자기소개</P>
+            <textarea cols='62' rows='3' name='intro' id='intro'>{{ old('intro') }}</textarea>
+            <P>목표</P> 
+            <textarea cols='62' rows='3' name="goal" id ="goal">{{ old('goal') }}</textarea>
+        </div>
         <div class = img_wrap>
             <p>사진</p> 
             <input type="file" name="photo" id="photo">
